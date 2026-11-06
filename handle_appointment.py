@@ -1,42 +1,44 @@
 appointment_list = []
-
+available_dates_list = []
 
 def appointment_creation(user_input: str):
-    user_input = input("What type of appointment would you like to schedule?\nTaper - T\nFade - F\nScissor Cut - S\nCustom - C\n")
-    name = ""
+    current_date = ""
+    name = input("Please enter your name: ")
     month = 0
     day = 0
-    year = 0
-    time = 0
+    year = 0 
     cut_type = ""
-
-    if user_input == 'T':
-        name = input("Enter your name: ")
-        month = input("Enter month (e.g; April = 04): ")
-        day = input("Enter day: ")
-        year = input("Enter year: ")
-        cut_type = "Taper"
-    elif user_input == 'F':
-        name = input("Enter your name: ")
-        month = input("Enter month (e.g; April = 04): ")
-        day = input("Enter day: ")
-        year = input("Enter year: ")
-        cut_type = "Fade"
-    elif user_input == 'S':
-        name = input("Enter your name: ")
-        month = input("Enter month (e.g; April = 04): ")
-        day = input("Enter day: ")
-        year = input("Enter year: ")
-        cut_type = "Scissor Cut"
-    elif user_input == 'C':
-        name = input("Enter your name: ")
-        month = input("Enter month (e.g; April = 04): ")
-        day = input("Enter day: ")
-        year = input("Enter year: ")
-        cut_type = "Custom"
+    time = ""
 
     date = (month, day, year)
-    appointment_data = (name, date, time, cut_type)
-    appointment_list.append(appointment_data)
+    data = (name, date, time, cut_type)
+    
 
-    print(appointment_list)
+    try:
+        if len(available_dates_list) == 0:
+            return
+        
+        for chosen_day in available_dates_list:
+            print(chosen_day)
+            
+        chosen_date = input("Please select date for appointment from the list above:")    
+        if chosen_date in available_dates_list:
+            current_date = chosen_date
+    
+    except Exception as e:
+        print("ERORR", e)
+
+def fetch_dates():
+    available_dates = input(str("Please enter your current availabilities: (11/6 for November 6)\n"))
+    dates = available_dates.split()
+
+    for date in dates:
+        if date in available_dates_list:
+            print("This date is already in the list")
+        else:
+            available_dates_list.append(date)
+    
+    
+    print(available_dates_list)
+
+    
