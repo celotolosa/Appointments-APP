@@ -1,0 +1,100 @@
+# ==========================================
+# Byte-compiled / optimized / DLL files
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ==========================================
+# Virtual Environments
+# ==========================================
+.venv/
+venv/
+ENV/
+env/
+# Custom environment folder names
+.env/
+.vtenv/
+
+# ==========================================
+# Distribution / Packaging / Builds
+# ==========================================
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==========================================
+# Jupyter Notebooks (uncomment if using them)
+# ==========================================
+#.ipynb_checkpoints
+#*/.ipynb_checkpoints/*
+
+# ==========================================
+# Testing / Coverage Reports
+# ==========================================
+htmlcov/
+.toml
+.cache
+.pytest_cache/
+.htmlcov/
+.coverage
+.coverage.*
+.nosexy
+nosetests.xml
+coverage.xml
+*.cover
+.tox/
+.nox/
+
+# ==========================================
+# Environment Variables & Secrets
+# ==========================================
+.env
+.env.*
+.secrets
+*.local
+
+# ==========================================
+# Database / Application Logs
+# ==========================================
+*.log
+pip-log.txt
+db.sqlite3
+db.sqlite3-journal
+
+# ==========================================
+# IDEs and Text Editors (VS Code / PyCharm)
+# ==========================================
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# ==========================================
+# Operating System files
+# ==========================================
+.DS_Store
+.DS_Store?
+Thumbs.db
