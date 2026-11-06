@@ -29,12 +29,17 @@ def appointment_creation(user_input: str):
         print("ERORR", e)
 
 def fetch_dates():
-    available_dates = input(str("Please enter your current availabilities: (11/6 for November 6)\n"))
+    password = input("Please enter password:\n")
+
+    if password != '1447':
+        return
+    
+    available_dates = input("Please enter your current availabilities: (11/6 for November 6)\n")
     dates = available_dates.split()
 
     for date in dates:
         if date in available_dates_list:
-            print("This date is already in the list")
+            print(f"Your selection, {date} is already in the list")
         else:
             available_dates_list.append(date)
     
